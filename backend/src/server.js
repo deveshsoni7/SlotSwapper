@@ -15,6 +15,11 @@ app.use(cors({ origin: process.env.CLIENT_ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(morgan('dev'));
 
+// Friendly root message for platform health checks
+app.get('/', (_req, res) => {
+  res.send('SlotSwapper API is running. Try GET /api/health');
+});
+
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true });
 });
