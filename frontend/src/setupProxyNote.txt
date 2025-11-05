@@ -1,0 +1,2 @@
+Note: API base URL is set in src/lib/api.js as http://localhost:5000/api. Adjust for production.
+
